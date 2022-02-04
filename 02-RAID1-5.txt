@@ -1,0 +1,47 @@
+RAID 1 - Espelhamento
+
+	Primeira etapa: Entrar em Gerenciamento de Disco
+01. Apertar Win+X 
+	Segunda etapa: Criar o RAID 1
+02. Escolher o disco 
+	Escolher a opção "Novo volume espelhado..."
+	Escolher o segundo disco e adicionar
+	<Avançar>
+03. Escolher uma letra
+	<Avançar>
+04.	Dar o nome do disco
+	Formatação rápida (em um pc real pode ser a opção normal)
+	<Avançar>
+	<Concluir>
+
+Situação do HD acabar queimando: 	
+	 	
+	Primeira etapa: Remover o espelho do HD que restou (Para que os usuários tenham acesso aos arquivos espelhados)
+01. Apertar Win+X
+	Gerenciamento de Disco
+02. Ir no HD que restou e remover o espelho
+
+Situação da empresa lhe dar outro HD para ser instalado e fazer o RAID 1 (o HD tem que ser da mesma quantia de espaço ou mais)
+
+	Primeira etapa: Entrar em Gerenciamento de Disco
+01. Apertar Win+X
+	Gerenciamento de Disco
+02. Ir no HD que restou e Adicionar Espelho
+	Colocar o novo HD para ser adicionado
+03. O espaço restante você pode fazer um volume simples ou fazer outro RAID
+
+RAID 5 - Paridade Desempenho de Leitura e Gravação (3 Discos ou mais HD ou SSD)
+
+	Primeira etapa: Entrar em Gerenciamento de Disco
+01. Apertar Win+X
+	Gerenciamento de Disco
+02. Escolher os 3 Discos 	
+	Ir em um disco e escolher "Novo Volume RAID 5"
+03. Escolher uma letra
+	<Avançar>
+04.	Dar o nome do disco
+	Formatação rápida (em um pc real pode ser a opção normal)
+	<Avançar>
+	<Concluir>	
+
+
