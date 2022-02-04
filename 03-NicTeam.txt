@@ -1,0 +1,15 @@
+NIC Teaming - Agrupamento de Placas de REDE 
+Vou juntar até 32 placas de rede e vou ter um único endereço de ip (vou ganhar balanceamento de carga
+vou dividir o trafego do meu servidor e redundância a falhas caso um pare os outros continuaram)
+
+	Primeira etapa: Criar o NicTeam
+01. Abrir Gerenciador do Servidor
+		Servidor Local
+		Habilitar Agrupamento de NIC
+02. Ir em Tarefas
+	Nova equipe
+		Colocar o nome da equipe 
+		Selecionar quais placas você ira utilizar (mínimo duas)
+		<OK>
+Finish							
+
