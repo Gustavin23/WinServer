@@ -1,0 +1,85 @@
+Windows Server - Aula 1
+
+Primeira etapa: Criação e Configuração Maquina Virtual
+01. Ferramentas;
+	Novo
+02. Nome e Sistema Operacional:
+	Nome: Windows 2012 - Server 
+	Pasta da Máquina: (deixar o padrão do sistema) 
+	Tipo: Microsoft Windows
+	Versão: Windows 2012 (64-bit)
+	<Próximo>
+03. Tamanho da memória:
+	Tamanho: 2048MB
+	<Próximo>
+04. Disco Rígido:
+	Criar um novo disco rígido virtual agora
+	<Criar>
+05. Tipo de arquivo de disco rígido
+	VDI (VirtualBOX Disk Image)
+	<Próximo>
+06. Armazenamento em disco rígido físico
+	Tamanho Fixo
+	<Próximo>
+07. Localização e tamanho do arquivo
+	Localização: (deixar o padrão do sistema)
+	Tamanho do disco: 20GB
+	<Criar>
+08. Configurações da Máquina Virtual Windows Server 2012 (Propriedades/Configurações)
+	Sistema
+		Processador
+			Processadores: 02 CPUs
+	Armazenamento
+		Colocar 5 HDS de 50GB			
+	Áudio
+		Habilitar Áudio: Desabilitar
+	Rede
+		Adaptador 1 
+			Habilitar Placa de Rede
+			Conectado a: Rede Interna
+			Nome: (deixar o padrão do sistema: intnet)
+		Adaptador 2 
+			Habilitar Placa de Rede
+			Conectado a: Rede Interna
+			Nome: (deixar o padrão do sistema: intnet)
+		Adaptador 3 
+			Habilitar Placa de Rede
+			Conectado a: Rede Interna
+			Nome: (deixar o padrão do sistema: intnet)	
+<OK>
+	Terceira etapa: Instalação do Windows (localizar a ISO descompactada)
+01. VM Windows: Iniciar
+02. Selecione o disco rígido de boot
+	Selecionar um arquivo de disco óptico virtual
+03. Seletor de Discos Ópticos
+	Acrescentar
+	Selecione o arquivo de disco óptico virtual: pt_windows_server_2012_r2_x64_dvd_2708007
+	<Abrir>
+04. Not Attached
+	Selecionar: pt_windows_server_2012_r2_x64_dvd_2708007
+	<Escolher>
+<Iniciar>
+
+01. Instalação do Windows Server
+	<Avançar>
+02. Instalar Agora
+	Install (Install Windows) - <Enter>
+	Chave do Windows : W3GGN - FT8W3- Y4M27 - J84CP - Q3VJ9
+03. Sistema Operacional
+	Windows Server 2012 R2 DataCenter (Servidor com GUI) - <Enter> 
+04. Termos de Licença
+	Aceito os termos de licença - <Enter>
+05. Qual tipo de instalação você desejaria ?
+	Personalizada: Instalar apenas o windows(avançado) <Enter> 
+06. Onde você quer instalar o Windows?
+	Espaço não alocado da unidade 0 <Enter>
+07.Configurações	
+	Senha: 123@senac <Enter>
+
+	Quarta etapa: Colocar os drivers no Servidor
+01. No virtualbox ir em Dispositivos, Inserir Imagem do adicional convidado
+02. Ir no Windows Explorer
+	Ir em VirtualBox Guest Additions <Enter>
+03. Instalação next, next, next e instalar 
+04. Rebootar
+05. Finish
