@@ -1,0 +1,43 @@
+Habilitando Lixeira AD
+
+	Gerenciador do Servidor
+		Ferramentas
+			Central Administrativa do Active Directory
+				(Botão direito do mouse) em cima do dominio
+					Habilitar Lixeira 
+						OK
+
+Criando Auditoria 
+
+	Gerenciador do Servidor
+		Ferramentas
+			GPO
+				Criar uma gpo no dominio chamada "Auditoria"
+					Editar
+						Computer Configuration 
+						Policies 
+							Windows Settings 
+								Security Settings 
+									Local Policies
+										Audit Policies 
+										Habilitar:
+										Audit logon events
+										Audit account management properties 
+
+Para observar os logs 
+	Event Viewer 
+		Windows Logs
+			Security 
+
+Criando GPO para baixar o chrome nas maquinas 
+
+É preciso primeiro baixar o programa em versão MSI 
+	Abrir a GPO 
+		Criar a GPO no dominio ou na pasta 
+			Editar
+				Computador
+					Politicas
+						Configuração de software
+						Instalação de software 
+							Novo 
+								Executar  
