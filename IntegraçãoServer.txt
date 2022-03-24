@@ -1,0 +1,78 @@
+Integração do Windows Server com o firewall pfSense
+
+Windows Server 
+Ajustar os ipv4 na placa de rede 
+EX: IP: 172.16.16.10
+	Mascara: 24
+	Gateway: 172.16.16.254
+	DNS: 172.16.16.10
+
+DNS
+Acessar o Painel de configuração do DNS
+	zonas de pesquisa inversa
+		Criar zona
+		Zona primária
+			Para todos os servidores DNS sendo executados em controladores de domínio neste domínio: EX:“rene.intra”
+				Zona de Pesquisa Inversa IPv4
+					Definir a Identificação da rede (IPv4 da Rede)
+						Permitir apenas atualização dinâmicas seguras 
+Localizar a nova zona criada
+	Inserir um novo ponteiro (PTR) dentro dela 
+		Adicionar os dispositivos da rede
+
+DHCP
+Selecionar o escopo
+	Opções do escopo
+		Direito e Configurar opções
+			Adicionar as opções:
+			003 Roteador (firewall) EX:172.16.16.254
+			006 Servidores DNS (windows) EX:172.16.16.10
+			015 Nome do domínio DNS EX:rene.intra
+			044 Servidores WINS/NBNS (windows) EX:172.16.16.10
+			046 Tipo de Nó WINS/NBT EX:0x8
+
+Firewall
+Services (DHCP Server)
+	Disabled
+
+UBUNTU SERVER 
+sudo -i
+systemd-resolve --status (verificar dns)
+vim etc/netplan/00-installer-config.yaml
+Editar o arquivo com o vim (dns)
+netplan --debug apply
+ping 8.8.8.8
+
+Windows Server 
+DNS
+	Acessar o Painel de configuração do DNS
+		zonas de pesquisa direta
+			Acessar o Domínio
+				Novo host (adicionamos todos os dispositivos e seu IP)
+					Novo aliás (CNAME)
+						Nome do alias (inserir “www”) e colocamos o webserver
+
+Firewall
+	Firewall Aliases IP \ IP \ ADD
+
+Properties
+Name (servidor WEB)
+Description (Descrição)
+Type (host(s))
+
+Host(s)
+IP “IPv4 do servidor”
+Description Nome do servidor
+
+Firewall NAT
+‘Add ⬆️
+Padrão 
+
+Destination “WAN address”
+Destination port range: HTTP para HTTP
+Redirect target IP: Type: Single host
+Address: webserver
+Redirect target port: HTTP
+Description: Redirecionando a porta http para o webserver
+
+Filter rule association: Rule NAT Redirecionando a porta HTTP para o Webserver
