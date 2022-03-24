@@ -40,4 +40,21 @@ Criando GPO para baixar o chrome nas maquinas
 						Configuração de software
 						Instalação de software 
 							Novo 
-								Executar  
+								Executar 
+								
+Criando GPP para mapear impressoras
+	Abrir a GPO 
+		Criar a GPO no dominio ou na pasta 
+			Editar
+				Usuario
+					Preferencias
+						Configuração do Windows
+							Mapas de Unidades
+							Novo
+							Atualizar
+							local : (o caminho da pasta)
+							Reconectar ON
+							Escolher a letra
+								OK
+							
+		
